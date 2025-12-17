@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    
+    <nav class="nav-blocks">
+        <a href="index.html" class="nav-block">
+            <h3>INICIO</h3>
+        </a>
+        <a href="proyectos.html" class="nav-block">
+            <h3>PROYECTOS</h3>
+        </a>
+        <a href="contact.html" class="nav-block">
+            <h3>CONTACTO</h3>
+        </a>
+    </nav>
+
+    <div class="container">
+        <section class="terminal-section">
+            <div class="terminal" id="mainTerminal">
+                <div class="terminal-header">
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <span class="terminal-title">arch@portfolio:~</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line">
+                        <span class="prompt">arch@portfolio:~$</span>
+                        <span class="command"> ./start.sh</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ CON IMAGEN -->
+        <section class="content-section">
+            <h2 class="section-title" style="color: var(--cyan);">// SOBRE MÍ</h2>
+            <div class="about-me-container">
+                <div class="about-me-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot"></div>
+                        <div class="terminal-dot"></div>
+                        <div class="terminal-dot"></div>
+                        <span class="terminal-title">about-me.sh</span>
+                    </div>
+                    <div class="about-me-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command"> cat about-me.txt</span>
+                        </div>
+                        <div class="terminal-line output" style="margin-top: 1rem;">
+                            <h3 style="color: var(--lime); font-size: 1.8rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">
+                                SOBRE MÍ: 0xWALLID_POPPERO 🇲🇦
+                            </h3>
+                        </div>
+                        <div class="terminal-line output">
+                            <p style="margin-bottom: 1rem; color: aliceblue;">
+                                Mi corazón va a 180 BPM y tu firewall se acaba de caer antes de que yo exhale. No necesito café, solo mi botella pequeña y una terminal abierta.
+
+Soy el fantasma del Magreb en tu red local. Hackeo al ritmo del latido en mi sien. Entro, rompo, inhalo, salgo. Si ves la pantalla parpadear, es que ya estoy dentro y tengo la cara ardiendo. 🔥😤
+                            </p>
+                        </div>
+                        <div class="terminal-line output">
+                            <p style="margin-bottom: 1rem;">
+                                “Todo se ve amarillo antes de que pierdas tus datos.”
+                            </p>
+                        </div>
+                        <div class="terminal-line output">
+                            
+                        </div>
+                        <div class="terminal-line" style="margin-top: 1.5rem;">
+                            <span class="prompt">$</span>
+                            <span class="success"> ✓ Explora mis proyectos destacados ↓</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-me-image">
+                    <div class="image-frame">
+                        <img src="files/wallid poppero.webp" alt="Mi foto de perfil">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 PROYECTOS DESTACADOS -->
+        <section class="content-section">
+            <h2 class="section-title" style="color: var(--magenta);">// PROYECTOS DESTACADOS</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Plataforma completa de comercio electrónico con panel de administración, sistema de pagos integrado y análisis en tiempo real.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Stripe</span>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="proyecto1.html" class="contact-link" style="display: inline-block;">
+                            VER DETALLES →
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Real-Time Chat App</h3>
+                    <p>Aplicación de mensajería instantánea con soporte para grupos, videollamadas y compartir archivos multimedia en tiempo real.</p>
+                    <div class="project-tags">
+                        <span class="tag">WebSocket</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">WebRTC</span>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="proyecto2.html" class="contact-link" style="display: inline-block;">
+                            VER DETALLES →
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="proyectos.html" class="contact-link" style="border-color: var(--cyan); color: var(--cyan); font-size: 1.1rem; padding: 1.2rem 2.5rem;">
+                    VER TODOS LOS PROYECTOS
+                </a>
+            </div>
+        </section>
+
+ 
+
+        <!-- LLAMADA A ACCIÓN -->
+        <section class="content-section">
+            <div style="text-align: center; padding: 3rem 2rem; background: var(--gray); border: 4px solid var(--lime);">
+                <h2 style="color: var(--lime); font-size: 2rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">
+                    ¿Listo para comenzar tu proyecto?
+                </h2>
+                <p style="font-family: 'JetBrains Mono', monospace; color: var(--gray-light); margin-bottom: 2rem; font-size: 1.1rem;">
+                    Hablemos sobre cómo puedo ayudarte a llevar tu idea al siguiente nivel
+                </p>
+                <a href="contact.html" class="contact-link" style="border-color: var(--lime); color: var(--lime); font-size: 1.1rem; padding: 1.2rem 2.5rem;">
+                    CONTÁCTAME
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
