@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maresme Infrastructure | Research Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pdf-viewer-container {
+            position: sticky;
+            top: 100px;
+            height: calc(100vh - 120px);
+            background: var(--gray);
+            border: 4px solid var(--cyan);
+            padding: 1rem;
+            box-shadow: 0 0 30px rgba(0, 255, 225, 0.2);
+        }
+
+        .pdf-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--cyan);
+        }
+
+        .pdf-controls h4 {
+            color: var(--lime);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .download-btn {
+            background: var(--bg);
+            border: 2px solid var(--lime);
+            padding: 0.5rem 1rem;
+            color: var(--lime);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            background: var(--lime);
+            color: var(--bg);
+            box-shadow: 0 0 15px rgba(3, 253, 3, 0.5);
+        }
+
+        .pdf-frame {
+            width: 100%;
+            height: calc(100% - 60px);
+            border: 2px solid var(--gray-light);
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .project-description {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .pdf-viewer-container {
+                position: relative;
+                top: 0;
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    
+    <nav class="nav-blocks">
+        <a href="index.html" class="nav-block">
+            <h3>HOME</h3>
+        </a>
+        <a href="projects.html" class="nav-block">
+            <h3>PROJECTS</h3>
+        </a>
+        <a href="contact.html" class="nav-block">
+            <h3>CONTACT</h3>
+        </a>
+    </nav>
+
+    <div class="container">
+        <section class="terminal-section">
+            <div class="terminal" id="mainTerminal">
+                <div class="terminal-header">
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <span class="terminal-title">arch@maresme-research:~</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line">
+                        <span class="prompt">arch@maresme-research:~$</span>
+                        <span class="command"> cat research_project.md</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div style="margin-bottom: 2rem;">
+                <a href="projects.html" style="color: var(--cyan); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                    ← Back to projects
+                </a>
+            </div>
+
+            <h2 class="section-title" style="color: var(--cyan);">CREATION OF NEW HIGHWAY ACCESSES</h2>
+            
+            <div class="about-content" style="margin-bottom: 3rem;">
+                <div style="display: inline-block; background: var(--cyan); color: var(--bg); padding: 0.5rem 1rem; font-size: 0.8rem; font-weight: bold; margin-bottom: 1.5rem;">
+                    RESEARCH PROJECT | 2ND BACCALAUREATE 2024-2025
+                </div>
+                
+                <h3 style="color: var(--lime); font-size: 1.8rem; margin-bottom: 1rem;">
+                    Climate Change Impact on Maresme Road Infrastructure
+                </h3>
+                
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #E8DFDF ">
+                    A comprehensive research project analyzing the imminent threat of sea-level rise on 
+                    coastal roads (N-II National Road) and railway infrastructure in Maresme due to 
+                    climate change. The study proposes innovative solutions for maintaining regional 
+                    mobility through new highway infrastructure.
+                </p>
+            </div>
+
+            <!-- PDF VIEWER + DESCRIPTION LAYOUT -->
+            <div class="project-layout">
+                <!-- PDF VIEWER -->
+                <div class="pdf-viewer-container">
+                    <div class="pdf-controls">
+                        <h4>📄 RESEARCH DOCUMENT</h4>
+                        <a href="files/Lloveras Torrents Jaume - Creació de nous accessos per a l'autovia.pdf" 
+                           download 
+                           class="download-btn">
+                            ⬇ DOWNLOAD PDF
+                        </a>
+                    </div>
+                    <iframe 
+                        class="pdf-frame" 
+                        src="files/Lloveras Torrents Jaume - Creació de nous accessos per a l'autovia.pdf#toolbar=0&navpanes=0&scrollbar=1"
+                        title="Research Project PDF">
+                    </iframe>
+                </div>
+
+                <!-- PROJECT DESCRIPTION -->
+                <div class="project-description">
+                    <!-- OBJECTIVES -->
+                    <div class="project-card" style="border-color: var(--cyan);">
+                        <h3 style="color: var(--lime);">🎯 Project Overview</h3>
+                        <p style="color: #E8DFDF">
+                            This research project investigates the consequences of climate change on Maresme's coastal infrastructure, 
+                            specifically focusing on the potential disappearance of the N-II National Road due to rising sea levels.
+                        </p>
+                        <p style="margin-top: 1rem;">
+                            <strong style="color: var(--cyan);">Key Objectives:</strong>
+                        </p>
+                        <ul style="color: #A2A2A2; padding-left: 1.5rem; line-height: 1.8; margin-top: 0.5rem;">
+                            <li>Analyze current traffic patterns across 30 municipalities</li>
+                            <li>Simulate impact of N-II disappearance</li>
+                            <li>Design new highway infrastructure (J-17)</li>
+                            <li>Create interactive GIS mapping solution</li>
+                        </ul>
+                    </div>
+
+                    <!-- METHODOLOGY -->
+                    <div class="project-card" style="border-color: var(--magenta);">
+                        <h3 style="color: var(--magenta);">🔬 Methodology</h3>
+                        <p style="margin-bottom: 1rem; color: #E8DFDF">
+                            The research was conducted in three main phases:
+                        </p>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="border-left: 3px solid var(--cyan); padding-left: 1rem;">
+                                <strong style="color: var(--cyan);">Phase 1:</strong> Real-time traffic monitoring using Catalan Traffic Map
+                            </div>
+                            <div style="border-left: 3px solid var(--cyan); padding-left: 1rem;">
+                                <strong style="color: var(--cyan);">Phase 2:</strong> Hypothetical impact simulation dividing towns into 3 categories
+                            </div>
+                            <div style="border-left: 3px solid var(--cyan); padding-left: 1rem;">
+                                <strong style="color: var(--cyan);">Phase 3:</strong> Solution design using Google Maps layered methodology
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RESULTS -->
+                    <div class="project-card" style="border-color: var(--violet);">
+                        <h3 style="color: var(--violet);">📊 Key Results</h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="background: rgba(3, 253, 3, 0.05); padding: 1rem; border-left: 3px solid var(--lime);">
+                                <strong style="color: var(--lime);">Hypothesis 1: CONFIRMED</strong>
+                                <p style="color: #E8DFDF; margin-top: 0.5rem;">
+                                    N-II disappearance would cause catastrophic mobility collapse
+                                </p>
+                            </div>
+                            <div style="background: rgba(155, 92, 255, 0.05); padding: 1rem; border-left: 3px solid var(--violet);">
+                                <strong style="color: var(--violet);">Hypothesis 2: PARTIALLY CONFIRMED</strong>
+                                <p style="color: #E8DFDF; margin-top: 0.5rem;">
+                                    Solutions exist but require massive investment and long-term planning
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOLUTION -->
+                    <div class="project-card" style="border-color: var(--lime);">
+                        <h3 style="color: var(--lime);">💡 Proposed Solution</h3>
+                        <p>
+                            <strong style="color: var(--cyan);">J-17 Highway System:</strong> 
+                            <p style="color: #E8DFDF">
+                            A new inland highway running parallel 
+                            to C-32, distributing traffic across 7 strategic groups of municipalities.
+                            
+                        </p>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--bg); border: 2px solid var(--cyan);">
+                            <p style="color: #E8DFDF; margin-bottom: 0.5rem;">The solution includes:</p>
+                            <ul style="color: var(--cyan); padding-left: 1.5rem; line-height: 1.8;">
+                                <li>20+ new highway access points</li>
+                                <li>Local connector roads between towns</li>
+                                <li>Improved C-32 entrances</li>
+                                <li>Complete traffic redistribution system</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- TOOLS -->
+                    <div class="project-card" style="border-color: var(--cyan);">
+                        <h3 style="color: var(--cyan);">🛠️ Tools & Technologies</h3>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span class="tag">Google Maps</span>
+                            <span class="tag">GIS Mapping</span>
+                            <span class="tag">Traffic Analysis</span>
+                            <span class="tag">Urban Planning</span>
+                            <span class="tag">Climate Research</span>
+                        </div>
+                    </div>
+
+                    <!-- INTERACTIVE MAP -->
+                    <div style="text-align: center; padding: 2rem; background: var(--gray); border: 3px solid var(--lime); box-shadow: 0 0 20px rgba(3, 253, 3, 0.2);">
+                        <h4 style="color: var(--lime); margin-bottom: 1rem; font-size: 1.2rem;">
+                            🗺️ VIEW INTERACTIVE MAP
+                        </h4>
+                        <p style="font-family: 'JetBrains Mono', monospace; color: #E8DFDF; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                            Explore the proposed infrastructure with layered visualization
+                        </p>
+                        <a href="https://www.google.com/maps/d/u/0/edit?mid=1PlQ6hs_oaGi7D8RkU_KwjdH2OG6ODac&ll=41.6073855476118%2C2.1885317853150887&z=11" 
+                           target="_blank" 
+                           class="contact-link" 
+                           style="border-color: var(--lime); color: var(--lime);">
+                            OPEN MAP →
+                        </a>
+                    </div>
+
+                    <!-- FINAL STATS -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <div style="text-align: center; padding: 1.5rem; background: var(--bg); border: 3px solid var(--lime); box-shadow: 0 0 15px rgba(3, 253, 3, 0.2);">
+                            <div style="font-size: 2.5rem; color: var(--lime); font-weight: bold;">30</div>
+                            <p style="color: #E8DFDF; font-size: 0.85rem;">Municipalities</p>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: var(--bg); border: 3px solid var(--cyan); box-shadow: 0 0 15px rgba(0, 255, 225, 0.2);">
+                            <div style="font-size: 2.5rem; color: var(--cyan); font-weight: bold;">7</div>
+                            <p style="color: #E8DFDF; font-size: 0.85rem;">Groups</p>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: var(--bg); border: 3px solid var(--magenta); box-shadow: 0 0 15px rgba(255, 45, 149, 0.2);">
+                            <div style="font-size: 2.5rem; color: var(--magenta); font-weight: bold;">J-17</div>
+                            <p style="color: #E8DFDF; font-size: 0.85rem;">Highway</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CALL TO ACTION -->
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--gray); border: 3px solid var(--cyan);">
+                <p style="font-family: 'JetBrains Mono', monospace; color: #E8DFDF; margin-bottom: 1rem;">
+                    Interested in this research or similar projects?
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="contact-link" style="border-color: var(--cyan); color: var(--cyan);">
+                        CONTACT ME
+                    </a>
+                    <a href="projects.html" class="contact-link" style="border-color: var(--magenta); color: var(--magenta);">
+                        MORE PROJECTS
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

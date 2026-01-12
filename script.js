@@ -32,11 +32,11 @@ function updateMatrix() {
     ctx.fillStyle = "rgba(11, 11, 15, 0.05)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Set the text color and font (verde chillón + glow)
+    // Set the text color and font (bright green + glow)
     ctx.fillStyle = "#03FD03"; 
     ctx.font = "14px 'JetBrains Mono', monospace";
     
-    // EFECTO NEÓN
+    // NEON EFFECT
     ctx.shadowBlur = 8;
     ctx.shadowColor = "#03FD03";
 
@@ -81,12 +81,12 @@ const bootSequence = [
     { text: '[  OK  ] Initializing neural.network...', class: 'success', delay: 120 },
     { text: '', class: 'output', delay: 200 },
     { text: '════════════════════════════════════', class: 'info', delay: 50 },
-    { text: '    DESARROLLADOR FULL STACK', class: 'info', delay: 80 },
-    { text: '    Creando experiencias digitales', class: 'info', delay: 80 },
+    { text: '    FULL STACK DEVELOPER', class: 'info', delay: 80 },
+    { text: '    Creating digital experiences', class: 'info', delay: 80 },
     { text: '════════════════════════════════════', class: 'info', delay: 50 },
     { text: '', class: 'output', delay: 200 },
-    { text: '> Sistema listo.', class: 'success', delay: 100 },
-    { text: '> Bienvenido al portfolio.', class: 'info', delay: 100 },
+    { text: '> System ready.', class: 'success', delay: 100 },
+    { text: '> Welcome to portfolio.', class: 'info', delay: 100 },
     { text: '', class: 'output', delay: 100 }
 ];
 
@@ -143,7 +143,7 @@ function runBootSequence(container) {
     nextLine();
 }
 
-// Iniciar secuencia de arranque
+// Start boot sequence
 setTimeout(() => {
     const terminalBody = document.getElementById('terminalBody');
     if (terminalBody) {
@@ -152,14 +152,14 @@ setTimeout(() => {
 }, 500);
 
 // ============================================
-// EFECTOS DE GLITCH
+// GLITCH EFFECTS
 // ============================================
 
 const navBlocks = document.querySelectorAll('.nav-block');
 const projectCards = document.querySelectorAll('.project-card');
 const imageFrame = document.querySelector('.image-frame');
 
-// Añadir efecto glitch a nav blocks y project cards
+// Add glitch effect to nav blocks and project cards
 [...navBlocks, ...projectCards].forEach(element => {
     element.addEventListener('mouseenter', function() {
         this.classList.add('glitch');
@@ -167,7 +167,7 @@ const imageFrame = document.querySelector('.image-frame');
     });
 });
 
-// Añadir efecto glitch al marco de la imagen
+// Add glitch effect to image frame
 if (imageFrame) {
     imageFrame.addEventListener('mouseenter', function() {
         this.classList.add('glitch');
@@ -176,7 +176,7 @@ if (imageFrame) {
 }
 
 // ============================================
-// VALIDACIÓN DEL FORMULARIO DE CONTACTO
+// CONTACT FORM VALIDATION
 // ============================================
 
 const contactForm = document.getElementById('contactForm');
@@ -198,33 +198,33 @@ if (contactForm) {
         mensaje: document.getElementById('errorMensaje')
     };
 
-    // Mensajes de error personalizados
+    // Custom error messages
     const errors = {
         nombre: {
-            valueMissing: 'El nombre es obligatorio',
-            patternMismatch: 'Solo se permiten letras (mínimo 3 caracteres)',
-            tooShort: 'El nombre debe tener al menos 3 caracteres'
+            valueMissing: 'Name is required',
+            patternMismatch: 'Only letters allowed (minimum 3 characters)',
+            tooShort: 'Name must be at least 3 characters'
         },
         email: {
-            valueMissing: 'El email es obligatorio',
-            typeMismatch: 'Formato de email inválido',
-            patternMismatch: 'Email inválido. Formato: usuario@dominio.com'
+            valueMissing: 'Email is required',
+            typeMismatch: 'Invalid email format',
+            patternMismatch: 'Invalid email. Format: user@domain.com'
         },
         telefono: {
-            patternMismatch: 'Solo números, entre 9 y 15 dígitos'
+            patternMismatch: 'Only numbers, between 9 and 15 digits'
         },
         asunto: {
-            valueMissing: 'El asunto es obligatorio',
-            tooShort: 'El asunto debe tener al menos 5 caracteres'
+            valueMissing: 'Subject is required',
+            tooShort: 'Subject must be at least 5 characters'
         },
         mensaje: {
-            valueMissing: 'El mensaje es obligatorio',
-            tooShort: 'El mensaje debe tener al menos 20 caracteres',
-            tooLong: 'El mensaje no puede superar los 500 caracteres'
+            valueMissing: 'Message is required',
+            tooShort: 'Message must be at least 20 characters',
+            tooLong: 'Message cannot exceed 500 characters'
         }
     };
 
-    // Función para mostrar error
+    // Function to show error
     function showError(input, message) {
         const errorSpan = errorMessages[input.name];
         if (errorSpan) {
@@ -234,7 +234,7 @@ if (contactForm) {
         input.classList.add('invalid');
     }
 
-    // Función para limpiar error
+    // Function to clear error
     function clearError(input) {
         const errorSpan = errorMessages[input.name];
         if (errorSpan) {
@@ -244,12 +244,12 @@ if (contactForm) {
         input.classList.remove('invalid');
     }
 
-    // Validar campo individual
+    // Validate individual field
     function validateField(input) {
         const validity = input.validity;
         const fieldErrors = errors[input.name];
 
-        // Si el campo está vacío y no es requerido, no mostrar error
+        // If field is empty and not required, don't show error
         if (!input.required && input.value.trim() === '') {
             clearError(input);
             return true;
@@ -280,17 +280,17 @@ if (contactForm) {
         return true;
     }
 
-    // Añadir eventos de validación en tiempo real
+    // Add real-time validation events
     Object.values(inputs).forEach(input => {
         if (input) {
-            // Validar al escribir (después del primer intento de envío)
+            // Validate while typing (after first submit attempt)
             input.addEventListener('input', function() {
                 if (this.hasAttribute('data-touched')) {
                     validateField(this);
                 }
             });
 
-            // Validar al salir del campo
+            // Validate on blur
             input.addEventListener('blur', function() {
                 this.setAttribute('data-touched', 'true');
                 validateField(this);
@@ -298,18 +298,18 @@ if (contactForm) {
         }
     });
 
-    // Manejar envío del formulario
+    // Handle form submission
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Marcar todos los campos como tocados
+        // Mark all fields as touched
         Object.values(inputs).forEach(input => {
             if (input) {
                 input.setAttribute('data-touched', 'true');
             }
         });
 
-        // Validar todos los campos
+        // Validate all fields
         let isValid = true;
         Object.values(inputs).forEach(input => {
             if (input && !validateField(input)) {
@@ -318,15 +318,15 @@ if (contactForm) {
         });
 
         if (isValid) {
-            // Aquí iría la lógica para enviar el formulario
-            // Por ahora, solo mostramos mensaje de éxito
+            // Here would go the logic to send the form
+            // For now, just show success message
             const successDiv = document.getElementById('formSuccess');
             successDiv.style.display = 'block';
             
-            // Limpiar formulario
+            // Clear form
             contactForm.reset();
             
-            // Limpiar errores
+            // Clear errors
             Object.values(inputs).forEach(input => {
                 if (input) {
                     clearError(input);
@@ -334,15 +334,15 @@ if (contactForm) {
                 }
             });
 
-            // Ocultar mensaje después de 5 segundos
+            // Hide message after 5 seconds
             setTimeout(() => {
                 successDiv.style.display = 'none';
             }, 5000);
 
-            // Scroll al mensaje de éxito
+            // Scroll to success message
             successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-            // Hacer scroll al primer campo con error
+            // Scroll to first field with error
             const firstInvalid = contactForm.querySelector('.invalid');
             if (firstInvalid) {
                 firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -353,14 +353,14 @@ if (contactForm) {
 }
 
 // ============================================
-// SMOOTH SCROLL PARA ENLACES INTERNOS
+// SMOOTH SCROLL FOR INTERNAL LINKS
 // ============================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         
-        // Solo aplicar smooth scroll si el href no es solo "#"
+        // Only apply smooth scroll if href is not just "#"
         if (href !== '#' && href.length > 1) {
             e.preventDefault();
             const target = document.querySelector(href);

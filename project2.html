@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App | Project Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    
+    <nav class="nav-blocks">
+        <a href="index.html" class="nav-block">
+            <h3>HOME</h3>
+        </a>
+        <a href="projects.html" class="nav-block">
+            <h3>PROJECTS</h3>
+        </a>
+        <a href="contact.html" class="nav-block">
+            <h3>CONTACT</h3>
+        </a>
+    </nav>
+
+    <div class="container">
+        <section class="terminal-section">
+            <div class="terminal" id="mainTerminal">
+                <div class="terminal-header">
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <span class="terminal-title">arch@chat-app:~</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line">
+                        <span class="prompt">arch@chat-app:~$</span>
+                        <span class="command"> npm run show:details</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div style="margin-bottom: 2rem;">
+                <a href="projects.html" style="color: var(--cyan); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                    ← Back to projects
+                </a>
+            </div>
+
+            <h2 class="section-title" style="color: var(--magenta);">REAL-TIME CHAT APP</h2>
+            
+            <div class="about-content" style="margin-bottom: 3rem;">
+                <div style="display: inline-block; background: var(--magenta); color: var(--bg); padding: 0.5rem 1rem; font-size: 0.8rem; font-weight: bold; margin-bottom: 1.5rem;">
+                    FEATURED PROJECT
+                </div>
+                
+                <h3 style="color: var(--lime); font-size: 1.8rem; margin-bottom: 1rem;">
+                    Real-Time Messaging Application
+                </h3>
+                
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    A modern communication platform that combines instant messaging, 
+                    video calls and file sharing. Designed for teams that need to 
+                    collaborate efficiently, whether in the office or remotely.
+                </p>
+            </div>
+
+            <div class="projects-grid" style="margin-bottom: 3rem;">
+                <div class="project-card" style="border-color: var(--magenta);">
+                    <h3 style="color: var(--lime);">🎯 Project Goal</h3>
+                    <p>
+                        Develop a complete communication tool that combines the 
+                        simplicity of WhatsApp with the advanced features of Slack, 
+                        optimized for work teams.
+                    </p>
+                </div>
+                
+                <div class="project-card" style="border-color: var(--magenta);">
+                    <h3 style="color: var(--lime);">⏱️ Duration</h3>
+                    <p>
+                        8 months of development (March 2024 - October 2024)
+                        <br><br>
+                        Team: 2 Full Stack Developers, 1 DevOps Engineer, 1 QA Tester
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="color: var(--cyan); font-size: 2rem;">// KEY FEATURES</h2>
+            
+            <div class="about-content" style="margin-bottom: 3rem;">
+                <div style="display: grid; gap: 1.5rem;">
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">💬 Instant Messaging</h4>
+                        <p>Send and receive messages in real-time with read receipts, typing status and custom emojis.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">👥 Group Chats</h4>
+                        <p>Create unlimited groups with up to 500 members, admin roles and customizable permissions.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">📞 HD Video Calls</h4>
+                        <p>High-quality video and audio calls with support for up to 50 simultaneous participants using WebRTC.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">📎 File Sharing</h4>
+                        <p>Upload and share documents, images and videos up to 100MB with integrated preview.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">🔔 Push Notifications</h4>
+                        <p>Smart notification system with priorities, scheduled silence and desktop notifications.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">🔐 End-to-End Encryption</h4>
+                        <p>All messages are encrypted to ensure privacy and security of conversations.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">🔍 Advanced Search</h4>
+                        <p>Find messages, files or contacts instantly with search by text, date or content type.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--magenta); padding-left: 1rem;">
+                        <h4 style="color: var(--magenta); margin-bottom: 0.5rem;">📱 Cross-Platform</h4>
+                        <p>Available on web, iOS and Android with perfect sync across devices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="color: var(--violet); font-size: 2rem;">// TECHNOLOGIES USED</h2>
+            
+            <div class="skills-grid" style="margin-bottom: 3rem;">
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Vue.js 3</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Pinia Store</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Socket.io</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">WebRTC</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Node.js</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Express</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Redis</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">PostgreSQL</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">MinIO</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">JWT</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Docker Compose</div>
+                <div class="skill-item" style="border-color: var(--magenta); color: var(--magenta);">Nginx</div>
+            </div>
+
+            <h2 class="section-title" style="color: var(--lime); font-size: 2rem;">// SYSTEM ARCHITECTURE</h2>
+            
+            <div class="about-content" style="margin-bottom: 3rem;">
+                <p style="margin-bottom: 2rem;">
+                    The system is designed with a microservices architecture to ensure 
+                    scalability and high availability:
+                </p>
+                
+                <div style="display: grid; gap: 1rem;">
+                    <div style="background: var(--bg); padding: 1.5rem; border-left: 4px solid var(--cyan);">
+                        <h4 style="color: var(--cyan); margin-bottom: 0.5rem;">🔹 API Gateway</h4>
+                        <p>Single entry point that handles authentication, rate limiting and request routing.</p>
+                    </div>
+                    
+                    <div style="background: var(--bg); padding: 1.5rem; border-left: 4px solid var(--cyan);">
+                        <h4 style="color: var(--cyan); margin-bottom: 0.5rem;">🔹 WebSocket Server</h4>
+                        <p>Dedicated server for real-time connections with Socket.io, handles thousands of simultaneous connections.</p>
+                    </div>
+                    
+                    <div style="background: var(--bg); padding: 1.5rem; border-left: 4px solid var(--cyan);">
+                        <h4 style="color: var(--cyan); margin-bottom: 0.5rem;">🔹 Media Server</h4>
+                        <p>Manages video calls and audio/video streaming using WebRTC and Mediasoup.</p>
+                    </div>
+                    
+                    <div style="background: var(--bg); padding: 1.5rem; border-left: 4px solid var(--cyan);">
+                        <h4 style="color: var(--cyan); margin-bottom: 0.5rem;">🔹 Cache Layer (Redis)</h4>
+                        <p>Stores sessions, presence status and frequently accessed data for maximum performance.</p>
+                    </div>
+                    
+                    <div style="background: var(--bg); padding: 1.5rem; border-left: 4px solid var(--cyan);">
+                        <h4 style="color: var(--cyan); margin-bottom: 0.5rem;">🔹 File Storage (MinIO)</h4>
+                        <p>Distributed storage system for multimedia files with integrated CDN.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="color: var(--magenta); font-size: 2rem;">// CHALLENGES AND SOLUTIONS</h2>
+            
+            <div class="projects-grid" style="margin-bottom: 3rem;">
+                <div class="project-card">
+                    <h3 style="color: var(--violet);">Challenge 1: Latency</h3>
+                    <p>
+                        <strong style="color: var(--lime);">Problem:</strong> Maintaining low latency in messages with geographically distributed users.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong style="color: var(--cyan);">Solution:</strong> Implementation of distributed edge servers, WebSocket sticky sessions and binary protocol optimization.
+                    </p>
+                </div>
+                
+                <div class="project-card">
+                    <h3 style="color: var(--violet);">Challenge 2: Scalability</h3>
+                    <p>
+                        <strong style="color: var(--lime);">Problem:</strong> Supporting thousands of simultaneous WebSocket connections.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong style="color: var(--cyan);">Solution:</strong> Microservices architecture with horizontal auto-scaling, Redis pub/sub for inter-server communication.
+                    </p>
+                </div>
+                
+                <div class="project-card">
+                    <h3 style="color: var(--violet);">Challenge 3: Video Calls</h3>
+                    <p>
+                        <strong style="color: var(--lime);">Problem:</strong> Inconsistent video quality depending on bandwidth.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong style="color: var(--cyan);">Solution:</strong> Adaptive bitrate streaming, simulcast layers and elegant quality degradation based on connection.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="color: var(--violet); font-size: 2rem;">// RESULTS</h2>
+            
+            <div class="about-content">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <div style="text-align: center; padding: 1.5rem; background: var(--bg); border: 2px solid var(--lime);">
+                        <div style="font-size: 3rem; color: var(--lime); font-weight: bold;">50k+</div>
+                        <p>Daily active users</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: var(--bg); border: 2px solid var(--cyan);">
+                        <div style="font-size: 3rem; color: var(--cyan); font-weight: bold;">< 100ms</div>
+                        <p>Average message latency</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: var(--bg); border: 2px solid var(--magenta);">
+                        <div style="font-size: 3rem; color: var(--magenta); font-weight: bold;">99.95%</div>
+                        <p>Monthly uptime</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: var(--bg); border: 2px solid var(--violet);">
+                        <div style="font-size: 3rem; color: var(--violet); font-weight: bold;">2M+</div>
+                        <p>Messages sent per day</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 2rem;">
+                    The application has been adopted by over 500 companies for internal communication. 
+                    Users highlight the ease of use, video call quality and system reliability. 
+                    The app maintains a 4.8/5 rating in app stores.
+                </p>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg); border: 2px solid var(--lime);">
+                    <p style="color: var(--lime); font-weight: bold; margin-bottom: 0.5rem; font-style: italic;">
+                        "This tool completely transformed our remote team's communication. 
+                        The video call quality is exceptional."
+                    </p>
+                    <p style="color: var(--gray-light); font-size: 0.9rem;">
+                        — CEO, Tech Startup
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--gray); border: 3px solid var(--magenta);">
+                <p style="font-family: 'JetBrains Mono', monospace; color: var(--gray-light); margin-bottom: 1rem;">
+                    Need a communication solution for your team?
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="contact-link" style="border-color: var(--magenta); color: var(--magenta);">
+                        CONTACT ME
+                    </a>
+                    <a href="projects.html" class="contact-link" style="border-color: var(--cyan); color: var(--cyan);">
+                        SEE MORE PROJECTS
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

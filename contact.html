@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Developer</title>
+    <title>Contact | Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -14,13 +14,13 @@
     
     <nav class="nav-blocks">
         <a href="index.html" class="nav-block">
-            <h3>INICIO</h3>
+            <h3>HOME</h3>
         </a>
-        <a href="proyectos.html" class="nav-block">
-            <h3>PROYECTOS</h3>
+        <a href="projects.html" class="nav-block">
+            <h3>PROJECTS</h3>
         </a>
         <a href="contact.html" class="nav-block">
-            <h3>CONTACTO</h3>
+            <h3>CONTACT</h3>
         </a>
     </nav>
 
@@ -42,25 +42,25 @@
             </div>
         </section>
 
-        <!-- FORMULARIO DE CONTACTO -->
+        <!-- CONTACT FORM -->
         <section class="content-section">
-            <h2 class="section-title" style="color: var(--lime);">// CONTACTO</h2>
+            <h2 class="section-title" style="color: var(--lime);">// CONTACT</h2>
             <div class="contact-content">
                 <p style="font-family: 'JetBrains Mono', monospace; color: var(--gray-light); font-size: 1.1rem; margin-bottom: 2rem;">
-                    ¿Tienes un proyecto en mente? Completa el formulario y hablemos.
+                    Have a project in mind? Fill out the form and let's talk.
                 </p>
                 
                 <form id="contactForm" class="contact-form">
                     <div class="form-group">
-                        <label for="nombre">Nombre completo *</label>
+                        <label for="nombre">Full name *</label>
                         <input 
                             type="text" 
                             id="nombre" 
                             name="nombre" 
                             required 
                             pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}"
-                            title="Solo letras, mínimo 3 caracteres"
-                            placeholder="Tu nombre">
+                            title="Only letters, minimum 3 characters"
+                            placeholder="Your name">
                         <span class="error-message" id="errorNombre"></span>
                     </div>
 
@@ -72,25 +72,25 @@
                             name="email" 
                             required 
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            title="Formato: usuario@dominio.com"
-                            placeholder="tu@email.com">
+                            title="Format: user@domain.com"
+                            placeholder="your@email.com">
                         <span class="error-message" id="errorEmail"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="telefono">Teléfono</label>
+                        <label for="telefono">Phone</label>
                         <input 
                             type="tel" 
                             id="telefono" 
                             name="telefono" 
                             pattern="[0-9]{9,15}"
-                            title="Solo números, entre 9 y 15 dígitos"
+                            title="Only numbers, between 9 and 15 digits"
                             placeholder="+34 123 456 789">
                         <span class="error-message" id="errorTelefono"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="asunto">Asunto *</label>
+                        <label for="asunto">Subject *</label>
                         <input 
                             type="text" 
                             id="asunto" 
@@ -98,13 +98,13 @@
                             required 
                             minlength="5"
                             maxlength="100"
-                            title="Mínimo 5 caracteres"
-                            placeholder="Tema de tu consulta">
+                            title="Minimum 5 characters"
+                            placeholder="Subject of your inquiry">
                         <span class="error-message" id="errorAsunto"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
+                        <label for="mensaje">Message *</label>
                         <textarea 
                             id="mensaje" 
                             name="mensaje" 
@@ -112,27 +112,27 @@
                             required 
                             minlength="20"
                             maxlength="500"
-                            title="Entre 20 y 500 caracteres"
-                            placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                            title="Between 20 and 500 characters"
+                            placeholder="Tell me about your project..."></textarea>
                         <span class="error-message" id="errorMensaje"></span>
                     </div>
 
                     <div class="form-group">
                         <button type="submit" class="submit-btn">
-                            ENVIAR MENSAJE
+                            SEND MESSAGE
                         </button>
                     </div>
 
                     <div id="formSuccess" class="form-success" style="display: none;">
-                        ✓ Mensaje enviado correctamente. Te responderé pronto.
+                        ✓ Message sent successfully. I'll get back to you soon.
                     </div>
                 </form>
 
                 <div class="contact-links" style="margin-top: 3rem;">
-                    <a href="mailto:tu@email.com" class="contact-link">EMAIL</a>
-                    <a href="https://github.com/tuusuario" target="_blank" class="contact-link">GITHUB</a>
-                    <a href="https://linkedin.com/in/tuusuario" target="_blank" class="contact-link">LINKEDIN</a>
-                    <a href="https://twitter.com/tuusuario" target="_blank" class="contact-link">TWITTER</a>
+                    <a href="mailto:your@email.com" class="contact-link">EMAIL</a>
+                    <a href="https://github.com/yourusername" target="_blank" class="contact-link">GITHUB</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">LINKEDIN</a>
+                    <a href="https://twitter.com/yourusername" target="_blank" class="contact-link">TWITTER</a>
                 </div>
             </div>
         </section>

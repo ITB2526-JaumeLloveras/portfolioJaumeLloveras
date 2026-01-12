@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    
+    <nav class="nav-blocks">
+        <a href="index.html" class="nav-block">
+            <h3>HOME</h3>
+        </a>
+        <a href="projects.html" class="nav-block">
+            <h3>PROJECTS</h3>
+        </a>
+        <a href="contact.html" class="nav-block">
+            <h3>CONTACT</h3>
+        </a>
+    </nav>
+
+    <div class="container">
+        <section class="terminal-section">
+            <div class="terminal" id="mainTerminal">
+                <div class="terminal-header">
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <div class="terminal-dot"></div>
+                    <span class="terminal-title">arch@projects:~</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line">
+                        <span class="prompt">arch@projects:~$</span>
+                        <span class="command"> ls -la projects/</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title" style="color: var(--cyan);">// ALL PROJECTS</h2>
+            <p style="font-family: 'JetBrains Mono', monospace; color: var(--gray-light); font-size: 1rem; margin-bottom: 3rem;">
+                Here you'll find all my projects. The first two have detailed information available.
+            </p>
+
+            <div class="projects-grid">
+                <!-- PROJECT 1 - WITH DETAIL LINK -->
+                <div class="project-card">
+                    <div style="display: inline-block; background: var(--cyan); color: var(--bg); padding: 0.3rem 0.8rem; font-size: 0.7rem; font-weight: bold; margin-bottom: 1rem;">
+                        FEATURED
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>
+                        Complete e-commerce platform with admin panel, 
+                        integrated payment system and real-time analytics.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Stripe</span>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project1.html" class="contact-link" style="display: inline-block; border-color: var(--cyan); color: var(--cyan);">
+                            VIEW DETAILS →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 - WITH DETAIL LINK -->
+                <div class="project-card">
+                    <div style="display: inline-block; background: var(--cyan); color: var(--bg); padding: 0.3rem 0.8rem; font-size: 0.7rem; font-weight: bold; margin-bottom: 1rem;">
+                        FEATURED
+                    </div>
+                    <h3>Real-Time Chat App</h3>
+                    <p>
+                        Instant messaging application with group support, video calls 
+                        and real-time multimedia file sharing.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">WebSocket</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">WebRTC</span>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project2.html" class="contact-link" style="display: inline-block; border-color: var(--cyan); color: var(--cyan);">
+                            VIEW DETAILS →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- REST OF PROJECTS - NO LINK -->
+                <div class="project-card">
+                    <h3>AI Dashboard</h3>
+                    <p>
+                        Interactive dashboard for data visualization and predictions with 
+                        integrated machine learning models.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">Flask</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Task Management System</h3>
+                    <p>
+                        Task and project management system with real-time collaboration, 
+                        push notifications and custom reports.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Angular</span>
+                        <span class="tag">NestJS</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Weather Forecast App</h3>
+                    <p>
+                        Weather forecast mobile app with interactive maps, 
+                        weather alerts and real-time data.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">OpenWeather API</span>
+                        <span class="tag">Maps SDK</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Fitness Tracker</h3>
+                    <p>
+                        Platform for tracking workouts, nutrition and physical progress 
+                        with wearables integration.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Blog CMS</h3>
+                    <p>
+                        Content management system for blogs with WYSIWYG editor, 
+                        SEO optimized and multilingual support.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Markdown</span>
+                        <span class="tag">Prisma</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Restaurant Booking App</h3>
+                    <p>
+                        Restaurant reservation system with table management, 
+                        digital menus and online payments.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">PayPal API</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Portfolio Generator</h3>
+                    <p>
+                        Automatic generator of personalized portfolios with modern 
+                        templates and HTML/CSS export.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Svelte</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Puppeteer</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Cryptocurrency Tracker</h3>
+                    <p>
+                        Real-time cryptocurrency tracking with charts, 
+                        price alerts and market analysis.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">CoinGecko API</span>
+                        <span class="tag">Chart.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--gray); border: 3px solid var(--magenta);">
+                <p style="font-family: 'JetBrains Mono', monospace; color: var(--gray-light); margin-bottom: 1rem;">
+                    Interested in collaborating on a project?
+                </p>
+                <a href="contact.html" class="contact-link" style="border-color: var(--magenta); color: var(--magenta);">
+                    CONTACT ME
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
