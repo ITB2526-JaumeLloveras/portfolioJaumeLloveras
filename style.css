@@ -9,6 +9,8 @@
     --cyan: #00FFE1;
     --magenta: #FF2D95;
     --violet: #9B5CFF;
+    --orange: #FF6B35;
+    --blue: #00D4FF;
     --lime: #03FD03;
     --gray: #2A2A35;
     --gray-light: #404050;
@@ -438,6 +440,115 @@ body::before {
     border: 2px solid var(--cyan);
     padding: 0.25rem 0.75rem;
     color: var(--cyan);
+}
+
+/* ============================================ */
+/* COLOR VARIANTS FOR PROJECT CARDS */
+/* ============================================ */
+
+/* CYAN */
+.project-card.color-cyan:hover {
+    border-color: var(--cyan);
+    box-shadow: 
+        0 0 30px rgba(0, 255, 225, 0.3),
+        inset 0 0 20px rgba(0, 255, 225, 0.05);
+}
+
+.project-card.color-cyan h3 {
+    color: var(--cyan);
+}
+
+.project-card.color-cyan .tag {
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+.project-card.color-cyan::before {
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 225, 0.1), transparent);
+}
+
+/* MAGENTA */
+.project-card.color-magenta:hover {
+    border-color: var(--magenta);
+    box-shadow: 
+        0 0 30px rgba(255, 45, 149, 0.3),
+        inset 0 0 20px rgba(255, 45, 149, 0.05);
+}
+
+.project-card.color-magenta h3 {
+    color: var(--magenta);
+}
+
+.project-card.color-magenta .tag {
+    border-color: var(--magenta);
+    color: var(--magenta);
+}
+
+.project-card.color-magenta::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 45, 149, 0.1), transparent);
+}
+
+/* VIOLET */
+.project-card.color-violet:hover {
+    border-color: var(--violet);
+    box-shadow: 
+        0 0 30px rgba(155, 92, 255, 0.3),
+        inset 0 0 20px rgba(155, 92, 255, 0.05);
+}
+
+.project-card.color-violet h3 {
+    color: var(--violet);
+}
+
+.project-card.color-violet .tag {
+    border-color: var(--violet);
+    color: var(--violet);
+}
+
+.project-card.color-violet::before {
+    background: linear-gradient(90deg, transparent, rgba(155, 92, 255, 0.1), transparent);
+}
+
+/* ORANGE */
+.project-card.color-orange:hover {
+    border-color: var(--orange);
+    box-shadow: 
+        0 0 30px rgba(255, 107, 53, 0.3),
+        inset 0 0 20px rgba(255, 107, 53, 0.05);
+}
+
+.project-card.color-orange h3 {
+    color: var(--orange);
+}
+
+.project-card.color-orange .tag {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.project-card.color-orange::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+}
+
+/* BLUE */
+.project-card.color-blue:hover {
+    border-color: var(--blue);
+    box-shadow: 
+        0 0 30px rgba(0, 212, 255, 0.3),
+        inset 0 0 20px rgba(0, 212, 255, 0.05);
+}
+
+.project-card.color-blue h3 {
+    color: var(--blue);
+}
+
+.project-card.color-blue .tag {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.project-card.color-blue::before {
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
 }
 
 .about-content {
